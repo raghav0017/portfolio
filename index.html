@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raghav — Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;600;700&family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+
+  </head>
+  <body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing">
+      <span class="cursor-ring-label" id="cursorLabel"></span>
+    </div>
+    <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+    <header id="siteHeader">
+      <div class="wrap">
+        <nav>
+          <div class="logo">Raghav<span></span></div>
+          <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+          </div>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+  <div class="hero-scatter" aria-hidden="true">
+
+  <div class="scatter-tile st1 tile-browser">
+    <div class="tile-browser-bar"><i></i><i></i><i></i></div>
+    <div class="tile-browser-body">
+      <span class="tb-line w1"></span>
+      <span class="tb-line w2"></span>
+      <span class="tb-line w3"></span>
+    </div>
+  </div>
+
+  <div class="scatter-tile st2 tile-code">
+    <span class="c-tag">&lt;Hero</span> <span class="c-attr">/&gt;</span>
+  </div>
+
+  <div class="scatter-tile st3 tile-code">
+    <span class="c-sel">.ui</span> { <span class="c-key">clean</span>: <span class="c-str">true</span>; }
+  </div>
+
+  <div class="scatter-tile st4 tile-term">
+    <span class="term-prompt">$</span> npm run build<span class="term-cursor">_</span>
+  </div>
+
+  <div class="scatter-tile st5 tile-term">
+    <span class="term-ok">✓</span> Deployed
+  </div>
+
+  <div class="scatter-tile st6 tile-code">
+    <span class="c-sel">git</span> commit -m <span class="c-str">"ship it"</span>
+  </div>
+
+  <div class="scatter-tile st7 tile-stat">
+    <span class="stat-num">50+</span>
+    <span class="stat-label">Projects shipped</span>
+  </div>
+
+</div>
+      <div class="wrap hero-content">
+        <div class="eyebrow mono eyebrow-center">
+          <span class="avail-dot"></span>AVAILABLE FOR WORK
+        </div>
+        <h1 class="hero-h1-margin">
+         Hi There, I’m Raghav. <br>turning pixels into <br> experiences.
+<br>
+          <!-- <span class="role mono shutter-wrap" id="typedRole">
+  <span class="shutter-text" id="roleText">Frontend Developer</span>
+  <span class="shutter-blinds" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </span>
+</span> -->
+<span class="role mono" id="typedRole" style="display:inline-block;"></span>
+        </h1>
+        <p class="lead lead-centered">
+          I design &amp; develop <b>UI/UX experiences</b> that make people's
+          lives simple. Less is more.
+        </p>
+        <div class="hero-actions hero-actions-center">
+          <a href="#projects" class="btn btn-primary"
+            >See my work <span class="arrow">→</span></a
+          >
+          <a href="#contact" class="btn btn-ghost">Hey</a>
+        </div>
+        <div class="scroll-cue scroll-cue-static">
+          <span>SCROLL</span>
+          <div class="line"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span
+        ><span>Figma</span><span>WordPress</span><span>Shopify</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span
+        ><span>Figma</span><span>WordPress</span><span>Shopify</span>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap about">
+        <div class="photo-stage reveal">
+          <div class="orbit-ring"><span class="orbit-dot"></span></div>
+          <span class="orbit-dot2"></span>
+          <div class="photo-blob"></div>
+
+          <div class="photo-frame" id="photoFrame">
+            <!-- Replace the src below with Raghav's real photo (e.g. "raghav.jpg") -->
+            <img
+              id="profileImg"
+              src="assets/character-2.png"
+              alt="Raghav — Web Developer"
+              onerror="
+                this.style.display = 'none';
+                document.getElementById('photoFallback').style.display = 'flex';
+              "
+            />
+            <div
+              class="photo-fallback hidden-initial"
+              id="photoFallback"
+            >
+              R
+            </div>
+          </div>
+
+          <div class="badge-now"><i></i>Currently at Embien Creative</div>
+
+          <div class="doodle d1">
+            <svg
+              width="52"
+              height="40"
+              viewBox="0 0 52 40"
+              fill="none"
+              class="doodle-svg-visible"
+            >
+              <path
+                d="M4 30C14 8 34 4 47 14"
+                stroke="var(--lime)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-dasharray="120"
+                stroke-dashoffset="120"
+                class="draw-path"
+              />
+              <path
+                d="M38 8 L47 14 L40 21"
+                stroke="var(--lime)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                stroke-dasharray="30"
+                stroke-dashoffset="30"
+                class="draw-path draw-path-delay-2"
+              />
+            </svg>
+            <div class="doodle-note accent doodle-note-d1">
+              Web Developer
+            </div>
+          </div>
+
+          <div class="doodle d2">
+            <div class="doodle-note doodle-note-d2">Raghav</div>
+          </div>
+
+          <div class="doodle d3">
+            <div class="doodle-note pop doodle-note-d3">
+              UI / UX Focused
+            </div>
+          </div>
+
+          <div class="doodle d4">
+            <svg
+              width="46"
+              height="36"
+              viewBox="0 0 46 36"
+              fill="none"
+              class="doodle-svg-visible"
+            >
+              <path
+                d="M42 4C30 2 8 8 4 26"
+                stroke="var(--accent)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-dasharray="110"
+                stroke-dashoffset="110"
+                class="draw-path draw-path-delay-1"
+              />
+              <path
+                d="M11 19 L4 26 L13 29"
+                stroke="var(--accent)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                stroke-dasharray="24"
+                stroke-dashoffset="24"
+                class="draw-path draw-path-delay-3"
+              />
+            </svg>
+            <div class="doodle-note doodle-note-d4">
+              Jalandhar, India
+            </div>
+          </div>
+
+          <svg
+            class="sparkle s1"
+            width="11"
+            height="11"
+            viewBox="0 0 18 18"
+            fill="var(--lime)"
+          >
+            <path
+              d="M9 0 L10.6 7.4 L18 9 L10.6 10.6 L9 18 L7.4 10.6 L0 9 L7.4 7.4 Z"
+            />
+          </svg>
+          <svg
+            class="sparkle s2"
+            width="9"
+            height="9"
+            viewBox="0 0 18 18"
+            fill="var(--accent)"
+          >
+            <path
+              d="M9 0 L10.6 7.4 L18 9 L10.6 10.6 L9 18 L7.4 10.6 L0 9 L7.4 7.4 Z"
+            />
+          </svg>
+          <svg
+            class="sparkle s3"
+            width="9"
+            height="9"
+            viewBox="0 0 18 18"
+            fill="#fff"
+          >
+            <path
+              d="M9 0 L10.6 7.4 L18 9 L10.6 10.6 L9 18 L7.4 10.6 L0 9 L7.4 7.4 Z"
+            />
+          </svg>
+        </div>
+        <div class="reveal about-text-block">
+          <div class="eyebrow mono">ABOUT ME</div>
+          <h2 class="about-heading">
+            Turning ideas into clean, usable interfaces.
+          </h2>
+          <p>
+            Hi, I'm <b>Raghav</b>, a passionate <b>Web Developer</b> dedicated
+            to transforming ideas into dynamic and user-friendly digital
+            experiences.
+          </p>
+          <p>
+            With expertise in coding, design, and problem-solving, I focus on
+            creating clean, scalable, and efficient solutions. I enjoy exploring
+            new web technologies, optimizing performance, and ensuring seamless,
+            intuitive user interactions.
+          </p>
+          <div class="about-pills">
+            <span>Jalandhar, India</span>
+            <span>B.Sc. IT</span>
+            <span>Web @ Embien Creative</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-watermark" aria-hidden="true">RAGHAV</div>
+    </section>
+
+    <section id="skills">
+      <div class="bg-doodles" aria-hidden="true">
+        <span class="d-sym skills-sym-1">&lt;/&gt;</span>
+        <span class="d-sym skills-sym-2">{ }</span>
+        <span class="d-plus skills-plus-1">+</span>
+        <span class="d-plus skills-plus-2">✦</span>
+        <div class="d-circle skills-circle-1"></div>
+        <div class="d-circle skills-circle-2"></div>
+      </div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="head-line"></span>
+            <h2>Skills</h2>
+          </div>
+          <div class="index-tag mono">6 tools, 3 disciplines</div>
+        </div>
+
+        <div class="skills-toolbar reveal">
+          <button class="cat-btn active" data-cat="all">All</button>
+          <button class="cat-btn" data-cat="code">
+            <span class="sw sw-accent2"></span>Code
+          </button>
+          <button class="cat-btn" data-cat="design">
+            <span class="sw sw-lime"></span>Design
+          </button>
+          <button class="cat-btn" data-cat="platform">
+            <span class="sw sw-ink"></span>Platforms
+          </button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <div
+            class="skill-card reveal r-scale sk-color-accent2"
+            data-cat="code"
+            data-pct="95"
+          >
+            <div class="skill-top">
+              <div class="skill-icon">HTML</div>
+              <span class="skill-cat-chip">Code</span>
+            </div>
+            <div class="skill-name">HTML5</div>
+            <div class="skill-note">
+              Semantic, accessible markup built to hold up.
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-top">
+                <span>Proficiency</span><span class="pctnum">95%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+          </div>
+
+          <div
+            class="skill-card reveal r-scale sk-color-accent"
+            data-cat="code"
+            data-pct="90"
+          >
+            <div class="skill-top">
+              <div class="skill-icon">CSS</div>
+              <span class="skill-cat-chip">Code</span>
+            </div>
+            <div class="skill-name">CSS3</div>
+            <div class="skill-note">
+              Layout, motion &amp; responsive design systems.
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-top">
+                <span>Proficiency</span><span class="pctnum">90%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+          </div>
+
+          <div
+            class="skill-card reveal r-scale sk-color-lime"
+            data-cat="code"
+            data-pct="82"
+          >
+            <div class="skill-top">
+              <div class="skill-icon skill-icon-dark">JS</div>
+              <span class="skill-cat-chip">Code</span>
+            </div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-note">
+              Interactions, DOM logic &amp; clean state.
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-top">
+                <span>Proficiency</span><span class="pctnum">82%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+          </div>
+
+          <div
+            class="skill-card reveal r-scale sk-color-ink"
+            data-cat="design"
+            data-pct="88"
+          >
+            <div class="skill-top">
+              <div class="skill-icon">FIG</div>
+              <span class="skill-cat-chip">Design</span>
+            </div>
+            <div class="skill-name">Figma</div>
+            <div class="skill-note">
+              Wireframes through to hi-fi, dev-ready UI.
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-top">
+                <span>Proficiency</span><span class="pctnum">88%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+          </div>
+
+          <div
+            class="skill-card reveal r-scale sk-color-accent"
+            data-cat="platform"
+            data-pct="85"
+          >
+            <div class="skill-top">
+              <div class="skill-icon">WP</div>
+              <span class="skill-cat-chip">Platform</span>
+            </div>
+            <div class="skill-name">WordPress</div>
+            <div class="skill-note">
+              Custom themes, ACF &amp; page-builder builds.
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-top">
+                <span>Proficiency</span><span class="pctnum">85%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+          </div>
+
+          <div
+            class="skill-card reveal r-scale sk-color-accent2"
+            data-cat="platform"
+            data-pct="78"
+          >
+            <div class="skill-top">
+              <div class="skill-icon">SHP</div>
+              <span class="skill-cat-chip">Platform</span>
+            </div>
+            <div class="skill-name">Shopify</div>
+            <div class="skill-note">
+              Liquid templating &amp; storefront builds.
+            </div>
+            <div class="skill-meter">
+              <div class="skill-meter-top">
+                <span>Proficiency</span><span class="pctnum">78%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="bg-doodles" aria-hidden="true">
+        <span class="d-sym certs-sym-1">🎓</span>
+        <span class="d-sym certs-sym-2">✎</span>
+        <span class="d-plus certs-plus-1">✦</span>
+        <span class="d-plus certs-plus-2">+</span>
+        <div class="d-circle certs-circle-1"></div>
+        <div class="d-line certs-line-1"></div>
+      </div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="head-line"></span>
+            <h2>Certifications</h2>
+          </div>
+          <div class="index-tag mono">education &amp; training</div>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card reveal r-tilt cert-card-accent2">
+            <div class="cert-main">
+              <div class="cert-icon">🎓</div>
+              <h3>Senior Secondary Education</h3>
+              <div class="cert-school">Jalandhar Public School</div>
+              <div class="cert-loc">Jalandhar, India</div>
+            </div>
+            <div class="cert-stub"><span class="yr">2019 – 2020</span></div>
+          </div>
+
+          <div class="cert-card reveal r-tilt cert-card-accent">
+            <div class="cert-main">
+              <div class="cert-icon">🎓</div>
+              <h3>B.Sc. IT (Information&nbsp;Technology)</h3>
+              <div class="cert-school">Lyallpur Khalsa College</div>
+              <div class="cert-loc">Jalandhar, India</div>
+            </div>
+            <div class="cert-stub"><span class="yr">2020 – 2023</span></div>
+          </div>
+
+          <div class="cert-card reveal r-tilt cert-card-lime">
+            <div class="cert-main">
+              <div class="cert-icon">💻</div>
+              <h3>Web Development Training</h3>
+              <div class="cert-school">Embien Creative</div>
+              <div class="cert-loc">Jalandhar, India</div>
+            </div>
+            <div class="cert-stub"><span class="yr">Jul – Dec 2023</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="exp-glow g1"></div>
+      <div class="exp-glow g2"></div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="head-line"></span>
+            <h2>Experience</h2>
+          </div>
+          <div class="index-tag mono">my journey so far</div>
+        </div>
+
+        <div class="cp-cap">🚀 Journey begins</div>
+
+        <div class="career-path" id="careerPath">
+          <div class="cp-track">
+            <div class="cp-track-fill" id="cpTrackFill"></div>
+          </div>
+
+          <div class="cp-stop reveal r-left cp-left">
+            <div class="cp-card">
+              <span class="cp-level">Stop 01 · Where it started</span>
+              <h3>Web Developer Internship</h3>
+              <div class="cp-company">at <b>Embien Creative</b>, Jalandhar</div>
+              <div class="cp-dates">Feb 2023 → May 2023</div>
+              <ul class="cp-list">
+                <li>Built and optimized numerous webpages from scratch</li>
+                <li>
+                  Learned HTML, CSS, JavaScript &amp; responsive design on real
+                  projects
+                </li>
+                <li>
+                  Worked closely with the team to ship functional, good-looking
+                  UI
+                </li>
+              </ul>
+              <div class="cp-skills">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>Responsive Design</span>
+              </div>
+            </div>
+            <div class="cp-marker"><div class="cp-marker-inner">🎓</div></div>
+            <div class="cp-side">
+              <span class="cp-side-label">3 months · learning the ropes</span>
+            </div>
+          </div>
+
+          <div class="cp-stop reveal r-right cp-right">
+            <div class="cp-card">
+              <span class="cp-now-tag"><i></i>Currently here</span>
+              <h3>
+                Web Developer
+                <span class="cp-card-subtitle"
+                  >(Full-time)</span
+                >
+              </h3>
+              <div class="cp-company">at <b>Embien Creative</b>, Jalandhar</div>
+              <div class="cp-dates">June 2023 → Present</div>
+              <ul class="cp-list">
+                <li>Building and optimizing client websites end-to-end</li>
+                <li>Focused on clean, responsive, user-friendly design</li>
+                <li>Collaborating with the team using modern frameworks</li>
+                <li>
+                  Sharpening usability &amp; performance best practices daily
+                </li>
+              </ul>
+              <div class="cp-skills">
+                <span>WordPress</span><span>Shopify</span><span>Figma</span
+                ><span>Team Collaboration</span>
+              </div>
+            </div>
+            <div class="cp-marker now">
+              <div class="cp-marker-inner">💻</div>
+            </div>
+            <div class="cp-side">
+              <span class="cp-side-label">2023 — ongoing &amp; growing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cp-cap end">📍 You are here — still growing</div>
+      </div>
+    </section>
+
+    <div class="mantra-band">
+      <div class="wrap">
+        <div class="tag">The whole philosophy</div>
+        <h3 class="reveal">
+          "I design &amp; develop UI/UX experiences that make people's lives
+          simple. Less is more — bring the work, and let it speak for itself."
+        </h3>
+        <a href="#projects" class="btn btn-primary reveal"
+          >See the work <span class="arrow">→</span></a
+        >
+      </div>
+    </div>
+
+    <section id="projects">
+      <div class="bg-doodles" aria-hidden="true">
+        <span class="d-sym projects-sym-1">▢</span>
+        <span class="d-sym projects-sym-2">✦</span>
+        <span class="d-plus projects-plus-1">+</span>
+        <span class="d-plus projects-plus-2">◆</span>
+        <div class="d-circle projects-circle-1"></div>
+        <div class="d-line projects-line-1"></div>
+      </div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="head-line"></span>
+            <h2>Projects</h2>
+          </div>
+          <div class="index-tag mono">
+            custom builds, WordPress &amp; Shopify
+          </div>
+        </div>
+        <div class="filter-row reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="custom">Custom</button>
+          <button class="filter-btn" data-filter="wordpress">WordPress</button>
+          <button class="filter-btn" data-filter="shopify">Shopify</button>
+          <button class="filter-btn" data-filter="figma">Figma</button>
+        </div>
+        <div class="work-grid" id="workGrid">
+    
+
+          <div class="project-card reveal r-scale" data-cat="wordpress"
+               data-images="assets/projects/evolvstudio1.webp,assets/projects/evolvstudio2.webp,assets/projects/evolvstudio3.webp">
+            <div class="cover p2">
+                <span class="stack-chip">WordPress</span>
+               <img src="assets/evolv-studios-ps.webp" alt="poster" class="p-poster">
+              <div class="cover-overlay"><span>View project ↗</span></div>
+            </div>
+            <div class="card-body">
+              <h3>EVOLV Studios</h3>
+              <p>
+                Portfolio site for a photography studio with a custom WordPress
+                theme.
+              </p>
+            </div>
+          </div>
+                <div class="project-card reveal r-scale" data-cat="wordpress"
+               data-images="assets/projects/ecommercegrowthbuilders-com.png">
+            <div class="cover p2">
+               <span class="stack-chip">WordPress</span>
+               <img src="assets/ecommercegrowthbuilders-ps.webp" alt="poster" class="p-poster">
+              <div class="cover-overlay"><span>View project ↗</span></div>
+     
+            </div>
+            <div class="card-body">
+              <h3>Ecommerce
+Growth Builders</h3>
+              <p>
+                Ecommerce Growth Builders is a results-driven eCommerce business operations consultancy
+              </p>
+            </div>
+          </div>
+                 <div class="project-card reveal r-scale" data-cat="wordpress"
+               data-images="assets/projects/Digital-Founders-Pro.png,assets/projects/popup-digitalfounder.png,assets/projects/popup-inner-digitalfounder.png">
+            <div class="cover p2">
+              <span class="stack-chip">WordPress</span>
+               <img src="assets/digitalfounder-ps.webp" alt="poster" class="p-poster">
+              <div class="cover-overlay"><span>View project ↗</span></div>
+            </div>
+            <div class="card-body">
+              <h3>Digital Founders Lab</h3>
+              <p>
+               Digital Founders Pro is a hands-on entrepreneurship and AI accelerator for professionals to build and launch their own business.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card reveal r-scale" data-cat="wordpress"
+               data-images="assets/projects/embien-home.webp,assets/projects/training-embien.webp">
+            <div class="cover p2">
+              <span class="stack-chip">WordPress</span>
+              <img src="assets/embien-home-ps.webp" alt="poster" class="p-poster">
+              <!-- <div class="layer"></div> -->
+              <div class="cover-overlay"><span>View project ↗</span></div>
+            </div>
+            <div class="card-body">
+              <h3>Embien Creative</h3>
+              <p>
+               Team Of Creative And Experienced Professionals Willing To Create, Build, Innovate. 
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card reveal r-scale" data-cat="custom"
+               data-images="assets/projects/exclusive1.webp,assets/projects/exclusive2.webp">
+               <div class="cover p3">
+              <span class="stack-chip">Custom</span>
+              <img src="assets/exclusive-ps.webp" alt="poster" class="p-poster">
+              <div class="cover-overlay"><span>View project ↗</span></div>
+            </div>
+            <div class="card-body">
+              <h3>E-Commerce Store</h3>
+              <p>
+              Exclusive is South Asia’s premier online shopping makterplace with an active presense
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card reveal r-scale" data-cat="custom"
+               data-images="assets/projects/pinealxt1.webp">
+            <div class="cover p4">
+              <span class="stack-chip">Custom</span>
+             <img src="assets/pinealxt-ps.webp" alt="poster" class="p-poster">
+              <div class="cover-overlay"><span>View project ↗</span></div>
+            </div>
+            <div class="card-body">
+              <h3>Pineal XT</h3>
+              <p>
+                Pineal XT is the result of a secret formula designed to rejuvenate your pineal gland.
+              </p>
+            </div>
+          </div>
+
+       
+
+          <div class="project-card reveal r-scale" data-cat="shopify"
+               data-images="assets/projects/Thatsalie.webp">
+            <div class="cover p6">
+              <span class="stack-chip">Shopify</span>
+            <img src="assets/thatsalie-ps.webp" alt="poster" class="p-poster">
+              <div class="cover-overlay"><span>View project ↗</span></div>
+            </div>
+            <div class="card-body">
+              <h3>That's a Lie</h3>
+              <p>
+                We create statement-driven content and apparel to spark conversation, call out misinformation, and make a mark.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card reveal r-scale">
+            <div class="cover p7"><a href="https://www.figma.com/design/XsDhsTb7aQMWpH2pO84URh/My-work?node-id=1-7796&p=f&t=OOZmelgufSTJHmZd-0" target="_blank">
+              <div class="layer"></div>
+              <div class="cover-overlay"><span>View project ↗</span></div>
+              <span class="stack-chip">Figma</span></a>
+            </div>
+            <div class="card-body">
+              <h3>Portfolio UI Kit</h3>
+              <p>
+                A reusable component &amp; wireframe kit designed in Figma
+                before any code was written.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="see-more-wrap reveal">
+          <button class="see-more">See more</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="bg-doodles" aria-hidden="true">
+        <span class="d-sym contact-sym-1">✉</span>
+        <span class="d-sym contact-sym-2">@</span>
+        <span class="d-plus contact-plus-1">✦</span>
+        <span class="d-plus contact-plus-2">+</span>
+        <div class="d-circle contact-circle-1"></div>
+      </div>
+      <div class="wrap contact-grid">
+        <div class="contact-visual reveal">
+          <img src="assets/character-2.png" alt="" />
+          <div class="contact-note">Usually replies within 24h</div>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow mono">CONTACT</div>
+          <h2 class="contact-heading">
+            Let's build something together.
+          </h2>
+       <form id="contactForm">
+  <div class="field-row">
+    <div class="field">
+      <input type="text" name="name" placeholder=" " required /><label>Name</label>
+    </div>
+    <div class="field">
+      <input type="email" name="email" placeholder=" " required /><label>E-mail</label>
+    </div>
+  </div>
+  <div class="field">
+    <input type="tel" name="phone" placeholder=" " /><label>Phone Number</label>
+  </div>
+  <div class="field">
+    <textarea name="message" placeholder=" " required></textarea><label>Message</label>
+  </div>
+  <button type="submit" class="submit-btn" id="submitBtn">Talk</button>
+</form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <div class="footer-brand">Raghav</div>
+            <p>
+              Web developer based in Jalandhar, India. Building clean, fast,
+              user-friendly interfaces — one project at a time.
+            </p>
+            <div class="newsletter-row">
+              <input type="email" placeholder="Your email" />
+              <button type="button" id="footerNotifyBtn">Notify me</button>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Sections</h4>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#experience">Experience</a>
+          </div>
+          <div class="footer-col">
+            <h4>Work</h4>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#home">Home</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="WhatsApp">WhatsApp</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Raghav © 2026. Made with ❤️.</span>
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="WhatsApp">wa</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== Project Screenshot Lightbox (fullscreen popup) ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project screenshot viewer">
+  <div class="lb-top">
+    <h3 id="lbTitle">Project Title</h3>
+    <span id="lbSubtitle">Screenshot</span>
+  </div>
+  <button class="lb-close" id="lbClose" aria-label="Close">&#10005;</button>
+  <button class="lb-arrow prev" id="lbPrev" aria-label="Previous screenshot">&#10094;</button>
+  <div class="lightbox-viewport" id="lbViewport"></div>
+  <button class="lb-arrow next" id="lbNext" aria-label="Next screenshot">&#10095;</button>
+  <div class="lb-counter" id="lbCounter">1 / 1</div>
+  <div class="lb-dots" id="lbDots"></div>
+</div>
+    <script src="js/script.js"></script>
+    <script src="js/pop.js"></script>
+   
+  </body>
+</html>
