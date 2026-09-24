@@ -2402,8 +2402,9 @@ header {
 	position: relative;
 	overflow: hidden;
 	background: linear-gradient( 150deg, var(--accent-2) 0%, #ff9e80 50%, var(--lime) 140% );
+	border: 1px solid #fdd563;
 }
-.contact-visual::after {
+/* .contact-visual::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -2412,7 +2413,7 @@ header {
     rgba(255, 255, 255, 0.35),
     transparent 45%
   );
-}
+} */
 .contact-note {
   position: absolute;
   bottom: 14px;
