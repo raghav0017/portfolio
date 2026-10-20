@@ -1288,7 +1288,7 @@
 .ld-frame[data-theme="dark"] .ldx-nav, .ld-frame[data-theme="dark"] .ldx-tabbar, .ld-frame[data-theme="dark"] .ldx-stats {
 	border-color: rgba(255, 255, 255, 0.1);
 }
-frame[data-theme="dark"] .ldx-tabbar {
+.ld-frame[data-theme="dark"] .ldx-tabbar {
  background: #000 !important;
 }
 .ld-frame[data-theme="dark"] .ldx-links,
