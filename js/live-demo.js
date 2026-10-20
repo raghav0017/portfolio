@@ -1,8 +1,4 @@
-// ================= LIVE PREVIEW SECTION =================
-// Self-contained controller for #live-demo. No CSS variables: accent colours
-// are written straight onto elements marked with data-acc="bg|soft".
-// Nothing here ever changes the height of the section, so the page stays
-// perfectly still while you click around.
+
 (function () {
   var $ = function (id) { return document.getElementById(id); };
 
@@ -103,14 +99,14 @@
     }
     if (glow) {
       glow.style.background =
-        "radial-gradient(60% 55% at 50% 52%, rgba(" + c.r + "," + c.g + "," + c.b + ",0.30), transparent 70%)";
+        "radial-gradient(60% 55% at 50% 52%, rgba(" + c.r + "," + c.g + "," + c.b + ",0.22), transparent 70%)";
     }
   }
 
   // ---------- fit the device into the fixed stage ----------
   function fit() {
     var small = window.innerWidth <= 700;
-    var sw = stage.clientWidth - (small ? 28 : 48), sh = stage.clientHeight - (small ? 36 : 108);
+    var sw = stage.clientWidth - (small ? 28 : 48), sh = stage.clientHeight - (small ? 36 : 100);
     var s = Math.min(1, sw / width, sh / FRAME_H);
     scaler.style.width = width + "px";
     scaler.style.height = FRAME_H + "px";
