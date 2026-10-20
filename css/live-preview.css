@@ -1496,8 +1496,8 @@
 .ld-frame[data-theme="dark"][data-style="bold"] .ldx-stats {
   border-color: #f6f5f0;
 }
-.ld-frame[data-theme="dark"][data-style="bold"] .ldx-tabbar{
-background: #000 !important;
+.ld-frame[data-theme="dark"] .ldx-tabbar {
+	background: #000 !important;
 }
 .ld-frame[data-theme="dark"][data-style="bold"] .ldx-btn,
 .ld-frame[data-theme="dark"][data-style="bold"] .ldx-pill,
