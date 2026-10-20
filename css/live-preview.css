@@ -1287,7 +1287,9 @@
 /* ================= DARK THEME ================= */
 .ld-frame[data-theme="dark"] .ldx-nav, .ld-frame[data-theme="dark"] .ldx-tabbar, .ld-frame[data-theme="dark"] .ldx-stats {
 	border-color: rgba(255, 255, 255, 0.1);
-	background: #000 !important;
+}
+#ldTabs[data-theme="dark"] {
+ background: #000 !important;
 }
 .ld-frame[data-theme="dark"] .ldx-links,
 .ld-frame[data-theme="dark"] .ldx-p,
