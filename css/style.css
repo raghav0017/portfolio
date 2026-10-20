@@ -1579,6 +1579,9 @@ section > .wrap {
 .wrap.contact-grid {
 	margin-bottom: 51px;
 }
+	.section-head {
+	margin-bottom: 35px;
+}
 header {
 	width: 100%;
 	max-width: 365px;
