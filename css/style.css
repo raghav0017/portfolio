@@ -1,15 +1,4 @@
-:root {
-  --bg: #f6f5f0;
-  --surface: #ffffff;
-  --ink: #14151a;
-  --ink-soft: #5b5c66;
-  --line: rgba(20, 21, 26, 0.12);
-  --accent: #1fde72;
-  --accent-2: #6c4cff;
-  --lime: #f2e940;
-  --radius: 18px;
-  --ease: cubic-bezier(0.16, 0.84, 0.32, 1);
-}
+
 * {
   box-sizing: border-box;
 }
@@ -2639,6 +2628,9 @@ footer {
 }
 .about {
 	padding: 20px 20px 54px ;
+}
+		#live-demo {
+	padding: 60px 0 0px;
 }
 }
 @media (prefers-reduced-motion: reduce) {
