@@ -1779,10 +1779,13 @@
     justify-content: flex-start;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 428px) {
   .ld-head-right {
     gap: 10px;
   }
+	#live-demo {
+	padding: 60px 0 0px;
+}
 }
 
 .ld-code-body::-webkit-scrollbar {
