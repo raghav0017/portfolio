@@ -1428,6 +1428,9 @@
 .ld-frame[data-theme="dark"] .ldx-stats {
   border-color: rgba(255, 255, 255, 0.1);
 }
+.ld-frame[data-theme="dark"] .ldx-tabbar {
+	background: #000 !important;
+}
 .ld-frame[data-theme="dark"] .ldx-links,
 .ld-frame[data-theme="dark"] .ldx-p,
 .ld-frame[data-theme="dark"] .ldx-card p {
@@ -1493,9 +1496,8 @@
 .ld-frame[data-theme="dark"][data-style="bold"] .ldx-stats {
   border-color: #f6f5f0;
 }
-.ld-frame[data-theme="dark"] .ldx-tabbar {
-	background: #000 !important;
-}
+
+
 .ld-frame[data-theme="dark"][data-style="bold"] .ldx-btn,
 .ld-frame[data-theme="dark"][data-style="bold"] .ldx-pill,
 .ld-frame[data-theme="dark"][data-style="bold"] .ldx-ic,
