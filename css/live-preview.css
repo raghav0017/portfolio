@@ -1,10 +1,8 @@
-
-
 #live-demo {
-  position: relative;
-  overflow: hidden;
-  overflow-anchor: none;
-  padding: 90px 0 100px;
+	position: relative;
+	overflow: hidden;
+	overflow-anchor: none;
+	padding: 60px 0 0px;
 }
 #live-demo button {
   font-family: "Inter", sans-serif;
