@@ -25,7 +25,17 @@
     <header id="siteHeader">
       <div class="wrap">
         <nav>
-          <div class="logo">Raghav<span></span></div>
+         <a href="#home" class="logo" aria-label="Raghav — home">
+            <svg class="logo-mark" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">
+              <rect width="64" height="64" rx="15" fill="#14151a" />
+              <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="7">
+                <path d="M21 48V16h12a10.5 10.5 0 0 1 0 21H21" stroke="#f6f5f0" />
+                <path d="M34 37l10 11" stroke="#1fde72" />
+              </g>
+              <circle cx="49" cy="17" r="4" fill="#6c4cff" />
+            </svg>
+            <span class="logo-text">Raghav</span><span class="logo-dot"></span>
+          </a>
           <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -593,6 +603,227 @@
       </div>
     </div>
 
+<!-- ================= LIVE PREVIEW SECTION (paste where you want it) ================= -->
+<section id="live-demo">
+  <div class="ld-bg" aria-hidden="true">
+    <span class="ld-bg-sym ld-bg-s1">&lt;/&gt;</span>
+    <span class="ld-bg-sym ld-bg-s2">@media</span>
+    <span class="ld-bg-plus ld-bg-p1">+</span>
+    <span class="ld-bg-plus ld-bg-p2">✦</span>
+    <div class="ld-bg-ring ld-bg-r1"></div>
+    <div class="ld-bg-ring ld-bg-r2"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="ld-headline"></span>
+        <h2>Live preview</h2>
+      </div>
+      <div class="ld-head-right">
+        <span class="ld-tag">3 screens · 1 layout</span>
+        <a href="#contact" class="ld-contact">Contact now
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="ld-intro reveal">
+      Every site I build adapts — it doesn't just shrink. Drag the width,
+      switch screens, restyle the layout, flip the theme and recolour it.
+      Same page, redesigned for each device.
+    </p>
+
+    <!-- ===== Controls ===== -->
+    <div class="ld-toolbar reveal">
+      <div class="ld-group">
+        <span class="ld-label">Screen</span>
+        <div class="ld-seg" id="ldScreens" role="group" aria-label="Screen size">
+          <button type="button" class="ld-btn" data-w="375" data-screen="phone">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>Phone
+          </button>
+          <button type="button" class="ld-btn" data-w="768" data-screen="tablet">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>Tablet
+          </button>
+          <button type="button" class="ld-btn is-active" data-w="1040" data-screen="desktop">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Desktop
+          </button>
+        </div>
+      </div>
+
+      <div class="ld-group ld-group-width">
+        <span class="ld-label">Drag to resize</span>
+        <div class="ld-range-row">
+          <input type="range" id="ldRange" min="320" max="1040" step="1" value="1040" aria-label="Preview width in pixels">
+          <span class="ld-readout" id="ldReadout">1040px</span>
+        </div>
+      </div>
+
+      <div class="ld-group">
+        <span class="ld-label">Layout</span>
+        <div class="ld-seg" id="ldStyles" role="group" aria-label="Layout style">
+          <button type="button" class="ld-btn is-active" data-style="clean">Clean</button>
+          <button type="button" class="ld-btn" data-style="bold">Bold</button>
+          <button type="button" class="ld-btn" data-style="minimal">Minimal</button>
+        </div>
+      </div>
+
+      <div class="ld-group">
+        <span class="ld-label">Theme</span>
+        <div class="ld-seg" id="ldThemes" role="group" aria-label="Theme">
+          <button type="button" class="ld-btn is-active" data-theme="light">Light</button>
+          <button type="button" class="ld-btn" data-theme="dark">Dark</button>
+        </div>
+      </div>
+
+      <div class="ld-group">
+        <span class="ld-label">Accent</span>
+        <div class="ld-swatches" id="ldSwatches" role="group" aria-label="Accent colour">
+          <button type="button" class="ld-swatch is-active" data-color="#1fde72" style="background:#1fde72" aria-label="Green"></button>
+          <button type="button" class="ld-swatch" data-color="#6c4cff" style="background:#6c4cff" aria-label="Purple"></button>
+          <button type="button" class="ld-swatch" data-color="#f2e940" style="background:#f2e940" aria-label="Lime"></button>
+          <button type="button" class="ld-swatch" data-color="#ff5a7a" style="background:#ff5a7a" aria-label="Pink"></button>
+          <label class="ld-swatch ld-swatch-custom" id="ldCustom" title="Pick any colour">
+            <input type="color" id="ldColor" value="#ff9a3c" aria-label="Custom accent colour">
+          </label>
+        </div>
+      </div>
+
+      <div class="ld-group ld-group-tour">
+        <span class="ld-label">Auto demo</span>
+        <button type="button" class="ld-btn ld-tour" id="ldTour">
+          <svg class="ld-ic-play" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"/></svg>
+          <svg class="ld-ic-stop" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+          <span id="ldTourText">Play tour</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== Device lab (fixed size — never changes height) ===== -->
+    <div class="ld-stage reveal" id="ldStage">
+      <div class="ld-glow" id="ldGlow"></div>
+      <span class="ld-stage-chip ld-stage-chip-l"><i data-acc="bg"></i>fully responsive</span>
+      <span class="ld-stage-chip ld-stage-chip-r"><i data-acc="bg"></i>no horizontal scroll</span>
+
+      <div class="ld-scaler" id="ldScaler">
+        <div class="ld-frame" id="ldFrame" data-bp="desktop" data-style="clean" data-theme="light">
+          <div class="ld-screen">
+
+            <!-- chrome: browser bar (desktop) -->
+            <div class="ld-bar ld-bar-browser">
+              <span class="ld-dots"><i style="background:#6c4cff"></i><i style="background:#f2e940"></i><i style="background:#1fde72"></i></span>
+              <span class="ld-url" id="ldUrl">raghav.portfolio — 1040px</span>
+            </div>
+            <!-- chrome: status bar (tablet + phone) -->
+            <div class="ld-bar ld-bar-status">
+              <span class="ld-time">9:41</span>
+              <span class="ld-notch"></span>
+              <span class="ld-status-icons"><i></i><i></i><i class="ld-batt"></i></span>
+            </div>
+
+            <!-- the sample website -->
+            <div class="ldx">
+              <div class="ldx-nav">
+                <span class="ldx-logo"><i class="ldx-logo-mark" data-acc="bg"></i>Raghav</span>
+                <div class="ldx-links" aria-hidden="true">
+                  <span>Work</span><span>Skills</span><span>Journey</span><span>Contact</span>
+                </div>
+                <button type="button" class="ldx-btn ldx-btn-sm ldx-nav-cta" data-acc="bg">Let's talk</button>
+                <button type="button" class="ldx-burger" id="ldBurger" aria-label="Toggle menu">
+                  <span></span><span></span><span></span>
+                </button>
+              </div>
+
+              <div class="ldx-main">
+                <div class="ldx-hero">
+                  <div class="ldx-copy">
+                    <span class="ldx-pill"><i data-acc="bg"></i>Open for new projects</span>
+                    <h3 class="ldx-h">Hi, I'm Raghav — Web Developer</h3>
+                    <p class="ldx-p">I build clean, fast, responsive websites on WordPress, Shopify and custom code.</p>
+                    <div class="ldx-actions">
+                      <button type="button" class="ldx-btn ldx-btn-primary" data-acc="bg">Start a project</button>
+                      <button type="button" class="ldx-btn ldx-btn-ghost">See my work</button>
+                    </div>
+                    <div class="ldx-stats">
+                      <div><b>8+</b><span>Projects</span></div>
+                      <div><b>6</b><span>Tools</span></div>
+                      <div><b>24h</b><span>Reply time</span></div>
+                    </div>
+                  </div>
+
+                  <div class="ldx-art" aria-hidden="true">
+                    <div class="ldx-art-card">
+                      <div class="ldx-art-bar"><i></i><i></i><i></i></div>
+                      <div class="ldx-art-body">
+                        <span class="ldx-art-hero" data-acc="bg"></span>
+                        <span class="ldx-art-line ldx-l1"></span>
+                        <span class="ldx-art-line ldx-l2"></span>
+                        <div class="ldx-art-tiles"><i data-acc="soft"></i><i></i><i></i></div>
+                      </div>
+                    </div>
+                    <div class="ldx-badge ldx-b1"><i data-acc="bg"></i>WordPress &amp; Shopify</div>
+                    <div class="ldx-badge ldx-b2">✓ Mobile ready</div>
+                  </div>
+                </div>
+
+                <div class="ldx-cards">
+                  <div class="ldx-card">
+                    <span class="ldx-ic" data-acc="soft"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></span>
+                    <div><h4>UI design</h4><p>Figma wireframes turned into pixel-clean layouts.</p></div>
+                  </div>
+                  <div class="ldx-card">
+                    <span class="ldx-ic" data-acc="soft"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg></span>
+                    <div><h4>Development</h4><p>HTML, CSS &amp; JavaScript built from scratch.</p></div>
+                  </div>
+                  <div class="ldx-card">
+                    <span class="ldx-ic" data-acc="soft"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+                    <div><h4>WordPress &amp; Shopify</h4><p>Custom themes and stores that are easy to manage.</p></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- phone-only bottom tab bar -->
+              <div class="ldx-tabbar" id="ldTabs" role="tablist" aria-label="Sample tab bar">
+                <button type="button" class="ldx-tab is-active" data-acc="soft" aria-label="Home"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></button>
+                <button type="button" class="ldx-tab" aria-label="Work"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button>
+                <button type="button" class="ldx-tab" aria-label="Chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg></button>
+                <button type="button" class="ldx-tab" aria-label="Profile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></button>
+              </div>
+
+              <!-- hamburger sheet (phone + tablet) -->
+              <div class="ldx-sheet" aria-hidden="true">
+                <span>Work</span><span>Skills</span><span>Journey</span><span>Contact</span>
+                <button type="button" class="ldx-btn ldx-btn-primary" data-acc="bg">Contact Raghav</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== What changed + CSS peek (fixed height) ===== -->
+    <div class="ld-info">
+      <div class="ld-info-card">
+        <div class="ld-info-top">
+          <span class="ld-badge"><i data-acc="bg"></i><b id="ldBpName">Desktop</b><em id="ldBpRange">900px and up</em></span>
+        </div>
+        <ul class="ld-points" id="ldPoints"></ul>
+      </div>
+      <div class="ld-code">
+        <div class="ld-code-top">
+          <span class="ld-code-dots"><i></i><i></i><i></i></span>
+          <span class="ld-code-title">style.css</span>
+          <button type="button" class="ld-copy" id="ldCopy">Copy</button>
+        </div>
+        <pre class="ld-code-body" id="ldCode"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
     <section id="projects">
       <div class="bg-doodles" aria-hidden="true">
         <span class="d-sym projects-sym-1">▢</span>
