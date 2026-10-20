@@ -1726,9 +1726,6 @@
   }
 }
 @media (max-width: 700px) {
-  #live-demo {
-    padding: 70px 0 80px;
-  }
   #live-demo .section-head {
     margin-bottom: 52px;
   }
@@ -1783,9 +1780,7 @@
   .ld-head-right {
     gap: 10px;
   }
-	#live-demo {
-	padding: 60px 0 0px;
-}
+
 }
 
 .ld-code-body::-webkit-scrollbar {
