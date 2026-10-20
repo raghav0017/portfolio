@@ -1116,13 +1116,14 @@
   font-size: 11.5px;
 }
 .ld-frame[data-bp="phone"] .ldx-tabbar {
-  flex: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 56px;
-  padding: 0 14px 4px;
-  border-top: 1px solid rgba(20, 21, 26, 0.09);
+	flex: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 56px;
+	padding: 0 14px 4px;
+	border-top: 1px solid rgba(20, 21, 26, 0.09);
+	background: #fff;
 }
 .ldx-tab {
   display: flex;
@@ -1283,10 +1284,9 @@
 }
 
 /* ================= DARK THEME ================= */
-.ld-frame[data-theme="dark"] .ldx-nav,
-.ld-frame[data-theme="dark"] .ldx-tabbar,
-.ld-frame[data-theme="dark"] .ldx-stats {
-  border-color: rgba(255, 255, 255, 0.1);
+.ld-frame[data-theme="dark"] .ldx-nav, .ld-frame[data-theme="dark"] .ldx-tabbar, .ld-frame[data-theme="dark"] .ldx-stats {
+	border-color: rgba(255, 255, 255, 0.1);
+	background: #000 !important;
 }
 .ld-frame[data-theme="dark"] .ldx-links,
 .ld-frame[data-theme="dark"] .ldx-p,
