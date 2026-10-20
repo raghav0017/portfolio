@@ -17,6 +17,7 @@ html {
   scroll-behavior: auto;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
   background: #f6f5f0;
@@ -59,6 +60,14 @@ button {
 .contact-visual img {
 	width: 100%;
 	display: block;
+}
+.logo img {
+	width: 100%;
+	max-width: 34px;
+	transition: 0.2s all linear;
+}
+.logo img:hover {
+	transform: rotate(-8deg) scale(1.06);
 }
 .progress-bar {
   position: fixed;
