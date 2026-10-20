@@ -1124,6 +1124,7 @@
 	padding: 0 14px 4px;
 	border-top: 1px solid rgba(20, 21, 26, 0.09);
 	background: #fff;
+	z-index: 3;
 }
 .ldx-tab {
   display: flex;
