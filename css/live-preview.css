@@ -151,17 +151,17 @@
 
 /* ---------- controls panel ---------- */
 .ld-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  height: 620px;
-  padding: 18px 20px 20px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  background: #ffffff;
-  border: 1px solid rgba(20, 21, 26, 0.1);
-  border-radius: 24px;
-  box-shadow: 0 24px 50px -34px rgba(20, 21, 26, 0.35);
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	/* height: 620px; */
+	padding: 18px 20px 20px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	background: #ffffff;
+	border: 1px solid rgba(20, 21, 26, 0.1);
+	border-radius: 24px;
+	box-shadow: 0 24px 50px -34px rgba(20, 21, 26, 0.35);
 }
 .ld-panel-head {
   display: flex;
