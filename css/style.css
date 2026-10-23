@@ -671,28 +671,27 @@ header.scrolled nav {
 
 /* ribbon A: lime, big words, alternating solid / outline */
 .rb-a {
-  z-index: 1;
-  transform: rotate(-1.5deg);
-  background: #f2e940;
-  color: #14151a;
-  border-top: 2px solid #14151a;
-  border-bottom: 2px solid #14151a;
-  box-shadow: 0 18px 30px -22px rgba(20, 21, 26, 0.45);
+	z-index: 1;
+	background: #000;
+	color: #fff;
+	border-top: 2px solid #14151a;
+	border-bottom: 2px solid #14151a;
+	box-shadow: 0 18px 30px -22px rgba(20, 21, 26, 0.45);
 }
 .rb-a .rb-group {
-  padding: 16px 0 42px;
+	padding: 16px 0 16px;
 }
 .rb-word {
-  padding: 0 30px;
-  font-family: "Archivo Black", "Space Grotesk", sans-serif;
-  font-size: 46px;
-  line-height: 1.1;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+	padding: 0 30px;
+	font-family: "Archivo Black", "Space Grotesk", sans-serif;
+	font-size: 29px;
+	line-height: 1.1;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
 }
 .rb-outline {
-  color: transparent;
-  -webkit-text-stroke: 1.5px #14151a;
+	color: transparent;
+	-webkit-text-stroke: 01px #fff;
 }
 .rb-star {
   font-style: normal;
@@ -706,18 +705,7 @@ header.scrolled nav {
   }
 }
 
-/* ribbon B: dark, chips with icon bubbles, runs the other way */
-.rb-b {
-  z-index: 2;
-  margin-top: -6px;
-  transform: rotate(1.5deg);
-  background: #14151a;
-  color: #f6f5f0;
-  box-shadow: 0 22px 36px -22px rgba(20, 21, 26, 0.7);
-}
-.rb-b .rb-group {
-  padding: 18px 0;
-  animation-duration: 34s;
+
 }
 .rb-chip {
   display: inline-flex;
@@ -739,10 +727,7 @@ header.scrolled nav {
   border-color: rgba(246, 245, 240, 0.45);
   transform: translateY(-2px);
 }
-.rb-chip b {
-  font-size: 17px;
-  font-weight: 600;
-}
+
 .rb-chip em {
   font-style: normal;
   font-family: "JetBrains Mono", monospace;
@@ -782,15 +767,6 @@ header.scrolled nav {
   background: #1fde72;
 }
 
-/* very large screens: flatter tilt */
-@media (min-width: 1800px) {
-  .rb-a {
-    transform: rotate(-0.9deg);
-  }
-  .rb-b {
-    transform: rotate(0.9deg);
-  }
-}
 
 /* laptop / small desktop */
 @media (max-width: 1100px) {
@@ -807,9 +783,7 @@ header.scrolled nav {
   .rb-star {
     font-size: 22px;
   }
-  .rb-b .rb-group {
-    padding: 16px 0;
-  }
+
   .rb-chip {
     margin: 0 12px;
     padding: 7px 18px 7px 8px;
@@ -842,9 +816,7 @@ header.scrolled nav {
   .rb-star {
     font-size: 18px;
   }
-  .rb-b .rb-group {
-    padding: 14px 0;
-  }
+
   .rb-chip {
     margin: 0 10px;
     padding: 6px 16px 6px 7px;
@@ -864,12 +836,7 @@ header.scrolled nav {
 
 /* phone */
 @media (max-width: 600px) {
-  .rb-a {
-    transform: rotate(-2deg);
-  }
-  .rb-b {
-    transform: rotate(2deg);
-  }
+
   .rb-chip em {
     display: none;
   }
@@ -888,9 +855,7 @@ header.scrolled nav {
   .rb-star {
     font-size: 16px;
   }
-  .rb-b .rb-group {
-    padding: 12px 0;
-  }
+
   .rb-chip {
     margin: 0 8px;
     padding: 6px 14px 6px 6px;
