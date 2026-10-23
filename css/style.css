@@ -610,6 +610,307 @@ header.scrolled nav {
     grid-template-columns: 1fr;
   }
 }
+/* ---------- skills ribbons (infinite, crossing, responsive) ---------- */
+.skill-ribbon {
+  position: relative;
+  z-index: 2;
+  padding: 56px 0;
+  overflow: hidden;
+}
+.rb-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.rb {
+  position: relative;
+  width: 112%;
+  margin-left: -6%;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+.rb-track {
+  display: flex;
+  width: max-content;
+}
+.rb-group {
+  flex: none;
+  display: flex;
+  align-items: center;
+  animation: rbLeft 30s linear infinite;
+}
+.rb-b .rb-group {
+  animation-name: rbRight;
+}
+@keyframes rbLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes rbRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.rb:hover .rb-group {
+  animation-play-state: paused;
+}
+
+/* ribbon A: lime, big words, alternating solid / outline */
+.rb-a {
+  z-index: 1;
+  transform: rotate(-1.5deg);
+  background: #f2e940;
+  color: #14151a;
+  border-top: 2px solid #14151a;
+  border-bottom: 2px solid #14151a;
+  box-shadow: 0 18px 30px -22px rgba(20, 21, 26, 0.45);
+}
+.rb-a .rb-group {
+  padding: 16px 0 42px;
+}
+.rb-word {
+  padding: 0 30px;
+  font-family: "Archivo Black", "Space Grotesk", sans-serif;
+  font-size: 46px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+.rb-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #14151a;
+}
+.rb-star {
+  font-style: normal;
+  font-size: 26px;
+  color: #6c4cff;
+  animation: rbSpin 6s linear infinite;
+}
+@keyframes rbSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ribbon B: dark, chips with icon bubbles, runs the other way */
+.rb-b {
+  z-index: 2;
+  margin-top: -6px;
+  transform: rotate(1.5deg);
+  background: #14151a;
+  color: #f6f5f0;
+  box-shadow: 0 22px 36px -22px rgba(20, 21, 26, 0.7);
+}
+.rb-b .rb-group {
+  padding: 18px 0;
+  animation-duration: 34s;
+}
+.rb-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 16px;
+  padding: 7px 20px 7px 8px;
+  border-radius: 100px;
+  border: 1px solid rgba(246, 245, 240, 0.18);
+  background: rgba(246, 245, 240, 0.06);
+  font-family: "Space Grotesk", sans-serif;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+.rb-chip:hover {
+  background: rgba(246, 245, 240, 0.14);
+  border-color: rgba(246, 245, 240, 0.45);
+  transform: translateY(-2px);
+}
+.rb-chip b {
+  font-size: 17px;
+  font-weight: 600;
+}
+.rb-chip em {
+  font-style: normal;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  color: rgba(246, 245, 240, 0.55);
+}
+.rb-ic {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-family: "JetBrains Mono", monospace;
+  font-style: normal;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #14151a;
+}
+.rb-c1 {
+  background: #ff9a3c;
+}
+.rb-c2 {
+  background: #38b6ff;
+}
+.rb-c3 {
+  background: #f2e940;
+}
+.rb-c4 {
+  background: #ff5a7a;
+}
+.rb-c5 {
+  background: #b49cff;
+}
+.rb-c6 {
+  background: #1fde72;
+}
+
+/* very large screens: flatter tilt */
+@media (min-width: 1800px) {
+  .rb-a {
+    transform: rotate(-0.9deg);
+  }
+  .rb-b {
+    transform: rotate(0.9deg);
+  }
+}
+
+/* laptop / small desktop */
+@media (max-width: 1100px) {
+  .skill-ribbon {
+    padding: 46px 0;
+  }
+  .rb-a .rb-group {
+    padding: 14px 0 36px;
+  }
+  .rb-word {
+    padding: 0 24px;
+    font-size: 38px;
+  }
+  .rb-star {
+    font-size: 22px;
+  }
+  .rb-b .rb-group {
+    padding: 16px 0;
+  }
+  .rb-chip {
+    margin: 0 12px;
+    padding: 7px 18px 7px 8px;
+  }
+  .rb-chip b {
+    font-size: 16px;
+  }
+  .rb-chip em {
+    font-size: 11px;
+  }
+  .rb-ic {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .skill-ribbon {
+    padding: 34px 0;
+  }
+  .rb-a .rb-group {
+    padding: 12px 0 28px;
+  }
+  .rb-word {
+    padding: 0 18px;
+    font-size: 30px;
+  }
+  .rb-star {
+    font-size: 18px;
+  }
+  .rb-b .rb-group {
+    padding: 14px 0;
+  }
+  .rb-chip {
+    margin: 0 10px;
+    padding: 6px 16px 6px 7px;
+  }
+  .rb-chip b {
+    font-size: 15px;
+  }
+  .rb-chip em {
+    font-size: 10.5px;
+  }
+  .rb-ic {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+}
+
+/* phone */
+@media (max-width: 600px) {
+  .rb-a {
+    transform: rotate(-2deg);
+  }
+  .rb-b {
+    transform: rotate(2deg);
+  }
+  .rb-chip em {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .skill-ribbon {
+    padding: 30px 0;
+  }
+  .rb-a .rb-group {
+    padding: 10px 0 24px;
+  }
+  .rb-word {
+    padding: 0 14px;
+    font-size: 24px;
+  }
+  .rb-star {
+    font-size: 16px;
+  }
+  .rb-b .rb-group {
+    padding: 12px 0;
+  }
+  .rb-chip {
+    margin: 0 8px;
+    padding: 6px 14px 6px 6px;
+    gap: 8px;
+  }
+  .rb-chip b {
+    font-size: 14px;
+  }
+  .rb-ic {
+    width: 28px;
+    height: 28px;
+    font-size: 10.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rb {
+    overflow-x: auto;
+  }
+}
 
 /* scattered decorative tiles, echoing the reference hero collage */
 .hero-scatter {
