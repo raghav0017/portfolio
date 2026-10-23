@@ -611,12 +611,7 @@ header.scrolled nav {
   }
 }
 /* ---------- skills ribbons (infinite, crossing, responsive) ---------- */
-.skill-ribbon {
-  position: relative;
-  z-index: 2;
-  padding: 56px 0;
-  overflow: hidden;
-}
+
 .rb-sr {
   position: absolute;
   width: 1px;
@@ -773,9 +768,7 @@ header.scrolled nav {
   .skill-ribbon {
     padding: 46px 0;
   }
-  .rb-a .rb-group {
-    padding: 14px 0 36px;
-  }
+
   .rb-word {
     padding: 0 24px;
     font-size: 38px;
@@ -806,9 +799,7 @@ header.scrolled nav {
   .skill-ribbon {
     padding: 34px 0;
   }
-  .rb-a .rb-group {
-    padding: 12px 0 28px;
-  }
+
   .rb-word {
     padding: 0 18px;
     font-size: 30px;
@@ -845,9 +836,7 @@ header.scrolled nav {
   .skill-ribbon {
     padding: 30px 0;
   }
-  .rb-a .rb-group {
-    padding: 10px 0 24px;
-  }
+
   .rb-word {
     padding: 0 14px;
     font-size: 24px;
