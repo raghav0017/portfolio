@@ -137,12 +137,12 @@ const progressBar = document.getElementById('progressBar');
       el.addEventListener('mouseenter', () => setRing(true, 'default', 'View'));
       el.addEventListener('mouseleave', () => setRing(false));
     });
-    document.querySelectorAll('.submit-btn, .btn-primary').forEach(el => {
+    document.querySelectorAll('.submit-btn, .btn-priy').forEach(el => {
       el.addEventListener('mouseenter', () => setRing(true, 'pop', 'Go'));
       el.addEventListener('mouseleave', () => setRing(false));
     });
     document.querySelectorAll('a, .btn, .skill-card, .acc-head, .filter-btn, .cat-btn, .photo-frame').forEach(el => {
-      if(el.closest('.project-card') || el.classList.contains('submit-btn') || el.classList.contains('btn-primary')) return;
+      if(el.closest('.project-card') || el.classList.contains('submit-btn') || el.classList.contains('btn-priy')) return;
       el.addEventListener('mouseenter', () => setRing(true, 'default', ''));
       el.addEventListener('mouseleave', () => setRing(false));
     });
@@ -394,3 +394,41 @@ form.addEventListener('submit', async (e) => {
     }, 2500);
   }
 });
+
+// ===== Skills ribbons: fill each row so the loop is seamless on any screen width =====
+(function () {
+  var root = document.getElementById('skillRibbon');
+  if (!root) return;
+  var SPEED = { 'rb-a': 70, 'rb-b': 55 }; // pixels per second, same on every screen
+  var rows = Array.prototype.slice.call(root.querySelectorAll('.rb'));
+  var base = rows.map(function (r) { return r.querySelector('.rb-group').innerHTML; });
+
+  function build() {
+    rows.forEach(function (row, i) {
+      var groups = row.querySelectorAll('.rb-group');
+      groups[0].innerHTML = base[i];
+      // measure one set of items, then repeat it until it is wider than the row
+      var one = 0;
+      Array.prototype.forEach.call(groups[0].children, function (c) {
+        var cs = getComputedStyle(c);
+        one += c.offsetWidth + parseFloat(cs.marginLeft) + parseFloat(cs.marginRight);
+      });
+      if (!one) return;
+      var times = Math.max(1, Math.ceil(row.clientWidth / one));
+      var html = '';
+      for (var n = 0; n < times; n++) html += base[i];
+      for (var g = 0; g < groups.length; g++) groups[g].innerHTML = html;
+      var speed = row.classList.contains('rb-a') ? SPEED['rb-a'] : SPEED['rb-b'];
+      var dur = Math.max(12, Math.round(Math.max(one * times, row.clientWidth) / speed));
+      for (g = 0; g < groups.length; g++) groups[g].style.animationDuration = dur + 's';
+    });
+  }
+
+  build();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+  var t;
+  window.addEventListener('resize', function () {
+    clearTimeout(t);
+    t = setTimeout(build, 150);
+  });
+})();
